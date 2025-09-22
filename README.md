@@ -1,0 +1,2 @@
+# Machine-Learning-for-Thermodynamic-Property-dataset-URS-
+Project description: Machine Learning for NIST JANAF thermodynamic dataset. NIST and other agencies provide a thermodynamic dataset to predict the entropy, enthalpy. The task will be do the elementary classi- fication and other ML approach to understand more about that data set and possibility implement the similar thing with kinetic dataset.
