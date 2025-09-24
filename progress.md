@@ -1,9 +1,9 @@
 ## 2025-09-18 (First Meeting)
 ### What I planned
-Reading virtual sensor essays (overview stage)
-Set up Python + GitHub repo
-Download JANAF CO₂ dataset (C-095.txt)
-Try first visualization (Cp vs T)
+Reading virtual sensor essays (overview stage) \
+Set up Python + GitHub repo \
+Download JANAF CO₂ dataset (C-095.txt) \
+Try first visualization (Cp vs T) \
 
 ## 2025-09-18 -- 2025-09-25 (Week1)
 ### What I did:
