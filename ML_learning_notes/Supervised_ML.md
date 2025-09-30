@@ -70,4 +70,39 @@ df_income.corr()
 corr = df_income.iloc[:, 1:5].corr()
 sns.heatmap(corr, annot=True);
 ```
+### Model building
+```
+# Sepearate the dependent variable (y) from the independent variables (X).
+X = df_income[['Age']] # With one variable.
+# X = df_income[['Age', 'Education', 'Gender']] # With all variables.
+y = df_income['Income']
+
+# Pull out some of the data (25%) and create a test dataset.
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=0)
+
+# Train the prediction model using the training data.
+model = LinearRegression()
+model.fit(X_train.values, y_train)
+
+# Display the y-intercept and coefficients of our regression model.
+# y = b + mx
+print(model.intercept_)
+print(model.coef_)
+
+# Predict income for a specific scenario.
+new_X = [[25]]
+# new_X = [[25, 10, 1]] # With all variables.
+model.predict(new_X)
+
+# Make predictions in the test data.
+y_pred = model.predict(X_test.values)
+
+# Evaluate the performance of the model (r-squared).
+metrics.r2_score(y_test, y_pred)
+
+# Compare the actual vs predicted value in the test data.
+df_compare = pd.DataFrame({'Actual': y_test, 'Predicted': y_pred})
+df_compare.head(10)
+```
+
 
