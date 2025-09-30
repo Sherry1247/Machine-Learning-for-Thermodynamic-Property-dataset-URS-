@@ -15,7 +15,16 @@ Explored multiple plots (Cp, S, ΔfH, ΔfG vs T) \
 Added second dataset data/C-093.txt for CO \
 Wrote script src/visualize_co_cp_vs_T.py → plotted Cp vs T for CO
 
-### Problems/ Questions:
-When plotting multiple properties on same axis, scales are different (Cp vs ΔfH). Should I normalize or use subplots?
+### Essay reference:
+1. Martin, D., Kühl, N., & Satzger, G. (2021). Virtual sensors. Business & Information Systems Engineering, 63(3), 315-323.
+2. Albertos, P., & Goodwin, G. C. (2002). Virtual sensors for control applications. Annual Reviews in Control, 26(1), 101-112.
 
-### Next Step:
+## 2025-09-25 -- 2025-10-02 (Week2):
+### Plan for this week:
+1. Learning supervised machine learning (SML): regression
+https://colab.research.google.com/drive/1FfikNXcsL1t77IHjIh0tLhHhvhrnKHir?usp=sharing#scrollTo=jDq0_zBkipp7 
+
+2. Explore datasets in kaggle: Medical Insurance Cost Dataset
+https://www.kaggle.com/datasets/mosapabdelghany/medical-insurance-cost-dataset
+
+
