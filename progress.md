@@ -21,10 +21,10 @@ Wrote script src/visualize_co_cp_vs_T.py → plotted Cp vs T for CO
 
 ## 2025-09-25 -- 2025-10-02 (Week2):
 ### Plan for this week:
-1. Learning supervised machine learning (SML): regression
+1. Learning supervised machine learning (SML): regression \
 https://colab.research.google.com/drive/1FfikNXcsL1t77IHjIh0tLhHhvhrnKHir?usp=sharing#scrollTo=jDq0_zBkipp7 
 
-2. Explore datasets in kaggle: Medical Insurance Cost Dataset
+2. Explore datasets in kaggle: Medical Insurance Cost Dataset \
 https://www.kaggle.com/datasets/mosapabdelghany/medical-insurance-cost-dataset
 
 
