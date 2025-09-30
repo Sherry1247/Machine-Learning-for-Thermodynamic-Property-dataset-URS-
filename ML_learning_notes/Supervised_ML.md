@@ -8,4 +8,13 @@
 ### Regression
 - source: https://colab.research.google.com/drive/1FfikNXcsL1t77IHjIh0tLhHhvhrnKHir?usp=sharing#scrollTo=s7DEThDhdbDf
 
+#### Import Python libraries
+```
+# Import the appropriate Python libraries.
+import pandas as pd
+import seaborn as sns
+from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split
+from sklearn import metrics
+```
 
