@@ -55,3 +55,19 @@ df_income.describe()
 # Show the distribution of income.
 sns.displot(df_income, x="Income");
 ```
+
+### Correlation Calculate
+- use corr() function
+```
+# Show the correlation (r) betwen variables.
+df_income.corr()
+```
+
+### Graph correlation
+- use seaborn to generate a heatmap:
+```
+# Show the relationships on a heatmap.  (We omit the ID column.)
+corr = df_income.iloc[:, 1:5].corr()
+sns.heatmap(corr, annot=True);
+```
+
