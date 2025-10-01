@@ -8,7 +8,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 # Load the data (adjust the path if the file is in a subdirectory)
-df = pd.read_csv(Machine_Learning_for_Thermodynamic_Property_dataset_URS_/data/insurance.csv)
+df = pd.read_csv('/Users/daisiqi/Machine-Learning-for-Thermodynamic-Property-dataset-URS-/data/insurance.csv')
 
 print(df.info())
 print("\nDescriptive Statistics:\n", df.describe())
