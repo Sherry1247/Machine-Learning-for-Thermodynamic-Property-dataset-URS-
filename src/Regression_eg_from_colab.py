@@ -41,4 +41,8 @@ print(df_income.corr())
 corr = df_income.iloc[:,1:5].corr()
 sns.heatmap(corr, annot = True)
 
+# pairplot
+sns.pairplot(df_income.iloc[:, 1:4], kind="kde")
+
+
 plt.show()
