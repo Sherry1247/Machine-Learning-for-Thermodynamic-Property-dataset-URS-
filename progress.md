@@ -28,6 +28,7 @@ https://colab.research.google.com/drive/1FfikNXcsL1t77IHjIh0tLhHhvhrnKHir?usp=sh
 
 2. Explore datasets in kaggle: Medical Insurance Cost Dataset \
 https://www.kaggle.com/datasets/mosapabdelghany/medical-insurance-cost-dataset
+- Write a full code to visualize data from kaggle (in csv file): create scatter plot, box-whisker plot, heatmap, and histogram distribution graph. 
 
 
 
