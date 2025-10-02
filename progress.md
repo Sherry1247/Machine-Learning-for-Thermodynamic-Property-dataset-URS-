@@ -30,5 +30,24 @@ https://colab.research.google.com/drive/1FfikNXcsL1t77IHjIh0tLhHhvhrnKHir?usp=sh
 https://www.kaggle.com/datasets/mosapabdelghany/medical-insurance-cost-dataset
 - Write a full code to visualize data from kaggle (in csv file): create scatter plot, box-whisker plot, heatmap, and histogram distribution graph. 
 
+### What I learned from meeting:
+- ** New Visualization Type: ** I expanded my knowledge of data visualization by learning about the violin plot as an effective way to display the distribution of data across different categories.
+- ** Library Differences : ** We discussed the practical differences between Python's visualization libraries, Seaborn and Matplotlib. A key insight is that Seaborn is often utilized more frequently by researchers in the humanities field due to its higher-level, aesthetically pleasing interfaces and statistical focus.
+- ** Scatter Plot Pattern: ** The most significant finding was the pattern observed in the Charges vs. Age scatter plot. The data does not follow a single, simple linear trend; instead, it explicitly shows three distinct patterns or clusters of charges relative to age.
+
+### Next Step:
+1. Advanced Modeling Strategy (Charges vs. Age)
+    - Segmentation: Set three barriers (thresholds) based on the observed clusters in the Charges vs. Age scatter plot to divide the data into distinct groups.
+    - Modeling: For each of the three identified patterns, perform a separate linear regression analysis to model the cost-age relationship within that specific segment.
+2. Broader Data Exploration and Feature Analysis
+    - Correlation & Visualization: I will explore how correlation exists among all variables in the dataset, looking for deeper patterns beyond the initial numerical heatmap. This involves generating and analyzing more specialized visualization graphs to fully understand the relationships between both numerical and categorical features.
+    - Comprehensive Regression: I will run regression analyses for variables beyond the initial segmentation plan (e.g., using all numerical and encoded categorical variables like BMI and Smoker status) to establish baseline predictive power and quantify their individual impact on insurance charges.
+
+
+
+
+
+
+
 
 
