@@ -31,9 +31,9 @@ https://www.kaggle.com/datasets/mosapabdelghany/medical-insurance-cost-dataset
 - Write a full code to visualize data from kaggle (in csv file): create scatter plot, box-whisker plot, heatmap, and histogram distribution graph. 
 
 ### What I learned from meeting:
-- ** New Visualization Type: ** I expanded my knowledge of data visualization by learning about the violin plot as an effective way to display the distribution of data across different categories.
-- ** Library Differences : ** We discussed the practical differences between Python's visualization libraries, Seaborn and Matplotlib. A key insight is that Seaborn is often utilized more frequently by researchers in the humanities field due to its higher-level, aesthetically pleasing interfaces and statistical focus.
-- ** Scatter Plot Pattern: ** The most significant finding was the pattern observed in the Charges vs. Age scatter plot. The data does not follow a single, simple linear trend; instead, it explicitly shows three distinct patterns or clusters of charges relative to age.
+- New Visualization Type: I expanded my knowledge of data visualization by learning about the violin plot as an effective way to display the distribution of data across different categories.
+- Library Differences :  We discussed the practical differences between Python's visualization libraries, Seaborn and Matplotlib. A key insight is that Seaborn is often utilized more frequently by researchers in the humanities field due to its higher-level, aesthetically pleasing interfaces and statistical focus.
+- Scatter Plot Pattern: The most significant finding was the pattern observed in the Charges vs. Age scatter plot. The data does not follow a single, simple linear trend; instead, it explicitly shows three distinct patterns or clusters of charges relative to age.
 
 ### Next Step:
 1. Advanced Modeling Strategy (Charges vs. Age)
