@@ -43,8 +43,11 @@ https://www.kaggle.com/datasets/mosapabdelghany/medical-insurance-cost-dataset
     - Correlation & Visualization: I will explore how correlation exists among all variables in the dataset, looking for deeper patterns beyond the initial numerical heatmap. This involves generating and analyzing more specialized visualization graphs to fully understand the relationships between both numerical and categorical features.
     - Comprehensive Regression: I will run regression analyses for variables beyond the initial segmentation plan (e.g., using all numerical and encoded categorical variables like BMI and Smoker status) to establish baseline predictive power and quantify their individual impact on insurance charges.
 
-
-
+## 2025-10-02 -- 2025-10-09 (week 3)
+### What I did:
+- Model Development and testing
+    - Categorical visualization: generated violin plots for charges vs sex, smoker, and region, visually confirming that smoker status as the dominant variance factor.
+    - Segmented Regression: Applied Piecewise Linear (and later Quadratic) regression by segmenting the data based on the target variable (charges: 0-17k, 15k-32k, 31k-60k).
 
 
 
