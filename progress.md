@@ -48,6 +48,9 @@ https://www.kaggle.com/datasets/mosapabdelghany/medical-insurance-cost-dataset
 - Model Development and testing
     - Categorical visualization: generated violin plots for charges vs sex, smoker, and region, visually confirming that smoker status as the dominant variance factor.
     - Segmented Regression: Applied Piecewise Linear (and later Quadratic) regression by segmenting the data based on the target variable (charges: 0-17k, 15k-32k, 31k-60k).
+    - Comphrehensive analysis about scatter plots, swarm plots, and violin plots: identifying threshold of 30 between bmi and charge.
+### Next week plan:
+- Delve deeper into the field of Artificial neural network
 
 
 
