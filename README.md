@@ -1,14 +1,16 @@
+# Machine Learning for Thermodynamic Property Dataset (URS)
+
 ---
 
 ## 📊 Project Timeline & Progress
 
-| Phase | Dates | Focus |
-|-------|-------|-------|
-| **Week 1** | Sep 18–25 | Repository setup, JANAF data exploration |
-| **Week 2** | Sep 25–Oct 2 | ML fundamentals, Kaggle dataset analysis |
-| **Week 3** | Oct 2–9 | Segmented regression, pattern recognition |
-| **Weeks 4–5** | Oct 9–30 | ANN implementation (Medical Insurance), model evaluation |
-| **Week 6** | Nov 1–6 | **Two dataset analysis: Tips (regression) + Titanic (classification)**<br> Learned k-fold cross-validation for small datasets |
+| Phase        | Dates         | Focus                                                                                         |
+|--------------|--------------|-----------------------------------------------------------------------------------------------|
+| **Week 1**   | Sep 18–25    | Repository setup, JANAF data exploration                                                      |
+| **Week 2**   | Sep 25–Oct 2 | ML fundamentals, Kaggle dataset analysis                                                      |
+| **Week 3**   | Oct 2–9      | Segmented regression, pattern recognition                                                     |
+| **Weeks 4–5**| Oct 9–30     | ANN implementation (Medical Insurance), model evaluation                                      |
+| **Week 6**   | Nov 1–6      | Two dataset analysis: Tips (regression) + Titanic (classification); k-fold cross-validation   |
 
 See [`progress.md`](progress.md) for detailed timeline and accomplishments.
 
@@ -128,15 +130,15 @@ See [`progress.md`](progress.md) for detailed timeline and accomplishments.
 2. Albertos, P., & Goodwin, G. C. (2002). Virtual sensors for control applications. *Annual Reviews in Control*, 26(1), 101-112.
 
 **Thermodynamic Data Sources:**
-3. NIST Chemistry WebBook. (2023). Retrieved from https://webbook.nist.gov/chemistry/
+3. NIST Chemistry WebBook. (2023). Retrieved from [https://webbook.nist.gov/chemistry/](https://webbook.nist.gov/chemistry/)
    - JANAF Thermochemical Tables: CO₂ (C-095.txt), CO (C-093.txt)
 
 **Kaggle Datasets Used:**
-4. Medical Insurance Cost Dataset. Retrieved from https://www.kaggle.com/datasets/mosapabdelghany/medical-insurance-cost-dataset
+4. Medical Insurance Cost Dataset. Retrieved from [https://www.kaggle.com/datasets/mosapabdelghany/medical-insurance-cost-dataset](https://www.kaggle.com/datasets/mosapabdelghany/medical-insurance-cost-dataset)
    - 1,338 samples, 7 features (age, sex, BMI, children, smoker, region, charges)
-5. Restaurant Tips Dataset. Retrieved from https://www.kaggle.com/datasets/jsphyg/tipping
+5. Restaurant Tips Dataset. Retrieved from [https://www.kaggle.com/datasets/jsphyg/tipping](https://www.kaggle.com/datasets/jsphyg/tipping)
    - 244 samples, 7 features (total_bill, tip, sex, smoker, day, time, size)
-6. Titanic Survival Dataset. Retrieved from https://www.kaggle.com/c/titanic/data
+6. Titanic Survival Dataset. Retrieved from [https://www.kaggle.com/c/titanic/data](https://www.kaggle.com/c/titanic/data)
    - 891 samples, 12 features (survived, pclass, name, sex, age, sibsp, parch, ticket, fare, cabin, embarked)
 
 ---
@@ -159,14 +161,14 @@ Through this project, I have:
 - ✅ Gained experience with Git version control and documentation
 
 **Week 6: Advanced Model Comparison & Evaluation**
-- ✅ **Mastered binary classification** with confusion matrices and ROC curves
-- ✅ **Understood overfitting mechanisms** and mitigation strategies (early stopping, L2 regularization)
-- ✅ **Learned when ANNs outperform vs. underperform** simpler models
-- ✅ **Applied correlation analysis** and feature importance ranking
-- ✅ **Developed business recommendation skills** from data insights
-- ✅ **K-fold cross-validation** methodology for small dataset performance estimation
-- ✅ **Model trade-off analysis:** Precision vs. recall, bias-variance trade-off
-- ✅ **Comparative analysis:** Regression vs. classification problem formulation
+- ✅ Mastered binary classification with confusion matrices and ROC curves
+- ✅ Understood overfitting mechanisms and mitigation strategies (early stopping, L2 regularization)
+- ✅ Learned when ANNs outperform vs. underperform simpler models
+- ✅ Applied correlation analysis and feature importance ranking
+- ✅ Developed business recommendation skills from data insights
+- ✅ K-fold cross-validation methodology for small dataset performance estimation
+- ✅ Model trade-off analysis: Precision vs. recall, bias-variance trade-off
+- ✅ Comparative analysis: Regression vs. classification problem formulation
 
 ---
 
