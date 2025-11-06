@@ -1,4 +1,3 @@
-
 ---
 
 ## 📊 Project Timeline & Progress
@@ -9,8 +8,7 @@
 | **Week 2** | Sep 25–Oct 2 | ML fundamentals, Kaggle dataset analysis |
 | **Week 3** | Oct 2–9 | Segmented regression, pattern recognition |
 | **Weeks 4–5** | Oct 9–30 | ANN implementation (Medical Insurance), model evaluation |
-| **Week 6** | Nov 1–6 | **Two dataset analysis: Tips (regression) + Titanic (classification)** |
-
+| **Week 6** | Nov 1–6 | **Two dataset analysis: Tips (regression) + Titanic (classification)**<br> Learned k-fold cross-validation for small datasets |
 
 See [`progress.md`](progress.md) for detailed timeline and accomplishments.
 
@@ -24,20 +22,51 @@ See [`progress.md`](progress.md) for detailed timeline and accomplishments.
 - ✅ Found BMI threshold of 30 as significant predictor
 - ✅ Validated effectiveness of segmented regression approach
 
-### Week 4–5: Artificial Neural Network Implementation
+### Week 4–5: Artificial Neural Network Implementation (Medical Insurance)
 - ✅ **Model Performance:** 83.49% R² on test data
-- ✅ **Accuracy Metrics:** 
+- ✅ **Accuracy Metrics:**
   - RMSE: $5,063.29
   - MAE: $3,355.92
   - Mean prediction accuracy for typical cases: 76%
 - ✅ **Architecture:** Information funnel principle (64→32→16 neurons)
 - ✅ **Generalization:** Strong test performance indicates no overfitting
 
+### Week 6: Comparative Dataset Analysis (Tips + Titanic)
+
+**What I Accomplished:**
+
+**1. Restaurant Tips Dataset (Regression):**
+- ✅ Analyzed 244 transactions with regression and classification approaches
+- ✅ Generated 8+ visualizations: correlation heatmap, scatter plots, box plots, violin plots, training curves
+- ✅ Discovered inverse relationship: Solo diners tip 21.7% vs. large parties 14.6%
+- ✅ Key finding: Linear regression (R²=0.46) outperformed ANN (R²=0.18) on small dataset
+- ✅ Developed business recommendations for optimal staffing and table configuration
+
+**2. Titanic Survival Dataset (Binary Classification):**
+- ✅ Analyzed 891 passengers with 12 features, cleaned missing data (19.9% Age values)
+- ✅ Generated 11+ visualizations: 7 EDA plots + 4 model evaluation plots (confusion matrices, ROC curves)
+- ✅ Identified gender as dominant predictor: 74.2% female vs. 18.9% male survival
+- ✅ Compared ANN vs. Logistic Regression: Both achieved 80.45% accuracy, AUC ≈ 0.85
+- ✅ Understood precision-recall trade-offs: ANN favors precision, Logistic Regression favors recall
+
+**3. Technical Skills Mastered:**
+- ✅ Binary classification with softmax activation and categorical cross-entropy loss
+- ✅ Confusion matrix analysis and ROC curve interpretation
+- ✅ Overfitting detection and mitigation (early stopping, L2 regularization)
+- ✅ Model comparison methodology and metric selection
+- ✅ K-fold cross-validation concept for small dataset performance estimation
+
+**4. Key Insights:**
+- **When to use ANNs:** Classification tasks with 500+ samples; Regression with 1000+ samples
+- **When to use Linear/Logistic Models:** Small datasets (< 500 samples), linear relationships dominate
+- **Overfitting indicators:** Validation-training loss gap > 0.15 suggests severe overfitting
+- **Feature engineering matters:** Interaction terms and domain knowledge improve model performance
+
 ---
 
 ## 📈 Model Evaluation
 
-### Artificial Neural Network (Medical Insurance)
+### Artificial Neural Network (Medical Insurance - Weeks 4-5)
 
 **Architecture:**
 - Input Layer: 8 features (age, BMI, children, sex, smoker, region)
@@ -59,93 +88,6 @@ See [`progress.md`](progress.md) for detailed timeline and accomplishments.
 5. `insurance_predictions_comparison.csv` - Detailed predictions for all test cases
 6. `insurance_ann_model.h5` - Saved model for deployment
 
-## 📊 Week 6: Comparative Dataset Analysis
-
-### Dataset #1: Restaurant Tips Prediction (Regression)
-
-**Objective:** Predict tip amounts and optimize restaurant revenue through data-driven resource allocation
-
-**Dataset:** 244 transactions with 7 features (total_bill, tip, sex, smoker, day, time, party_size)
-
-**Key Discoveries:**
-- ✅ **Inverse tip percentage relationship**: Solo diners tip 21.7% vs. large parties 14.6%
-- ✅ **Primary predictors identified**: Total bill (r=0.676), Party size (r=0.489)
-- ✅ **Business insight**: Saturday/Sunday dinners generate 37% higher tips than weekday lunch
-- ✅ **Model finding**: Linear regression (R²=0.46) outperforms ANN (R²=0.18) due to small dataset
-
-**Visualizations Generated:**
-- Correlation heatmap with feature importance ranking
-- Scatter plots: Total bill vs. tip (with R² annotation), colored by party size
-- Box & violin plots: Tip distributions across categorical variables
-- Tip percentage analysis by party size
-- Training history: Loss and MAE curves
-- Overfitting indicator with gap analysis
-
-**Business Recommendations:**
-- Prioritize Saturday/Sunday dinner staffing (highest tip volume)
-- Configure tables: 60% two-tops, 30% four-tops, 10% six-tops
-- Focus upselling on large parties (10% bill increase → 17.5% tip increase)
-
----
-
-### Dataset #2: Titanic Survival Prediction (Binary Classification)
-
-**Objective:** Predict passenger survival probability using demographic and travel characteristics
-
-**Dataset:** 891 passengers with 12 features (survival target: 342 survived, 549 died)
-
-**Key Discoveries:**
-- ✅ **Gender dominates**: 74.2% female survival vs. 18.9% male (55% gap)
-- ✅ **Class hierarchy rigid**: 1st class 63% → 2nd class 47% → 3rd class 24%
-- ✅ **Age effects**: Children (0-12) 60-68% survival, Elderly (60+) 21% survival
-- ✅ **Model performance**: ANN and Logistic Regression tie at 80.45% accuracy, AUC ≈ 0.85
-
-**Data Cleaning:**
-- Imputed 177 missing Age values (19.9%) with median
-- Dropped high-cardinality features: Cabin (77% missing), Ticket, Name
-- One-hot encoded: Sex, Embarked; Created FamilySize feature
-
-**ANN Architecture:**
-- Input: 11 features → Hidden: 32→16 neurons (ReLU) → Output: 2 (Softmax)
-- Training: 121 epochs, early stopping (patience=30), L2 regularization
-- **Overfitting status**: Mild-to-moderate (gap=0.10), controlled by regularization
-
-**Model Comparison:**
-
-| Metric | ANN | Logistic Regression |
-|--------|-----|---------------------|
-| Accuracy | 80.45% | 80.45% |
-| Precision | 82.69% | 79.31% |
-| Recall | 62.32% | 66.67% |
-| ROC AUC | 0.8526 | 0.8433 |
-| **Trade-off** | Conservative (fewer false alarms) | Liberal (catches more survivors) |
-
-**Visualizations Generated:**
-- 7 EDA plots: Box plots (age), stacked bars (gender, class, age groups), violin (fare), heatmap
-- 4 Model evaluation plots:
-  1. Training history (loss & MAE convergence)
-  2. Overfitting indicator (validation-training gap analysis)
-  3. Confusion matrices (ANN vs. Logistic Regression)
-  4. ROC curves comparison (AUC discrimination ability)
-
-**Key Insight:** 
-Despite identical accuracy, ANN favors precision (minimize false positives) while Logistic Regression favors recall (find all survivors). Choice depends on application priority.
-
----
-
-### Comparative Insights: Regression vs. Classification
-
-| Aspect | Tips (Regression) | Titanic (Classification) |
-|--------|-------------------|--------------------------|
-| **Dataset Size** | 244 samples | 891 samples |
-| **Target Variable** | Continuous (tip $) | Binary (survived 0/1) |
-| **Best Model** | Linear Regression | ANN ≈ Logistic Reg (tie) |
-| **ANN Performance** | Underperformed (R²=0.18) | Excellent (80% acc, AUC=0.85) |
-| **Key Lesson** | Small data → simple models win | Classification benefits from ANN capacity |
-| **Overfitting Risk** | Severe (gap=0.37) | Moderate (gap=0.10) |
-| **Primary Predictor** | Total bill (r=0.68) | Gender (74% vs 19%) |
-
-
 ---
 
 ## 💡 Methodology
@@ -154,12 +96,14 @@ Despite identical accuracy, ANN favors precision (minimize false positives) whil
 - **Categorical Encoding:** One-hot encoding for categorical variables
 - **Normalization:** Z-score standardization (StandardScaler)
 - **Train-Test Split:** 80/20 with stratification
+- **Missing Data Handling:** Median imputation for numerical features
 
 ### 2. Modeling Approaches Tested
 - Linear regression
 - Piecewise linear regression (segmented by thresholds)
 - Polynomial regression
-- **Artificial Neural Networks** (final approach)
+- Logistic regression (for classification)
+- **Artificial Neural Networks** (primary approach)
 
 ### 3. Model Selection Rationale
 - **Why ANN?** Captures non-linear relationships and feature interactions
@@ -167,48 +111,107 @@ Despite identical accuracy, ANN favors precision (minimize false positives) whil
   - Sufficient capacity to learn diverse patterns
   - Progressive compression to prevent overfitting
   - Hierarchical feature representation
+- **When to use simpler models?** Small datasets (< 500 samples) with linear relationships
+
+### 4. Model Evaluation Techniques
+- **Regression:** R², RMSE, MAE, percentage errors, residual analysis
+- **Classification:** Accuracy, precision, recall, F1-score, confusion matrix, ROC-AUC
+- **Overfitting detection:** Training vs. validation loss gap analysis
+- **Cross-validation:** K-fold methodology for robust performance estimation
 
 ---
 
 ## 📚 Literature & References
 
+**Virtual Sensors (Project Foundation):**
 1. Martin, D., Kühl, N., & Satzger, G. (2021). Virtual sensors. *Business & Information Systems Engineering*, 63(3), 315-323.
 2. Albertos, P., & Goodwin, G. C. (2002). Virtual sensors for control applications. *Annual Reviews in Control*, 26(1), 101-112.
+
+**Thermodynamic Data Sources:**
 3. NIST Chemistry WebBook. (2023). Retrieved from https://webbook.nist.gov/chemistry/
-4. Kaggle Medical Insurance Dataset. Retrieved from https://www.kaggle.com/datasets/mosapabdelghany/medical-insurance-cost-dataset
+   - JANAF Thermochemical Tables: CO₂ (C-095.txt), CO (C-093.txt)
+
+**Kaggle Datasets Used:**
+4. Medical Insurance Cost Dataset. Retrieved from https://www.kaggle.com/datasets/mosapabdelghany/medical-insurance-cost-dataset
+   - 1,338 samples, 7 features (age, sex, BMI, children, smoker, region, charges)
+5. Restaurant Tips Dataset. Retrieved from https://www.kaggle.com/datasets/jsphyg/tipping
+   - 244 samples, 7 features (total_bill, tip, sex, smoker, day, time, size)
+6. Titanic Survival Dataset. Retrieved from https://www.kaggle.com/c/titanic/data
+   - 891 samples, 12 features (survived, pclass, name, sex, age, sibsp, parch, ticket, fare, cabin, embarked)
 
 ---
+
 ## 🎓 Learning Outcomes
 
 Through this project, I have:
 
+**Weeks 1-3: Data Analysis Fundamentals**
 - ✅ Mastered data preprocessing and normalization techniques
 - ✅ Understood regression modeling and segmentation strategies
-- ✅ Built and trained neural networks from scratch
+- ✅ Developed proficiency in visualization libraries (matplotlib, seaborn)
+- ✅ Learned pattern recognition and correlation analysis
+
+**Weeks 4-5: Neural Network Development**
+- ✅ Built and trained neural networks from scratch using TensorFlow/Keras
+- ✅ Understood forward/backpropagation and activation functions
 - ✅ Learned the importance of model evaluation and generalization
 - ✅ Developed proficiency in Python ML/DL libraries (pandas, scikit-learn, TensorFlow)
 - ✅ Gained experience with Git version control and documentation
-- ✅ **NEW: Mastered binary classification with confusion matrices and ROC curves**
-- ✅ **NEW: Understood overfitting mechanisms and mitigation strategies**
-- ✅ **NEW: Learned when ANNs outperform vs. underperform simpler models**
-- ✅ **NEW: Applied correlation analysis and feature importance ranking**
-- ✅ **NEW: Developed business recommendation skills from data insights**
 
+**Week 6: Advanced Model Comparison & Evaluation**
+- ✅ **Mastered binary classification** with confusion matrices and ROC curves
+- ✅ **Understood overfitting mechanisms** and mitigation strategies (early stopping, L2 regularization)
+- ✅ **Learned when ANNs outperform vs. underperform** simpler models
+- ✅ **Applied correlation analysis** and feature importance ranking
+- ✅ **Developed business recommendation skills** from data insights
+- ✅ **K-fold cross-validation** methodology for small dataset performance estimation
+- ✅ **Model trade-off analysis:** Precision vs. recall, bias-variance trade-off
+- ✅ **Comparative analysis:** Regression vs. classification problem formulation
 
 ---
 
 ## 📖 Documentation
 
-- **Project Report:** See `docs/URS_project_on_Kaggle_medical_insurance_dataset.docx`
-- **Detailed Progress:** See `progress.md`
-- **Code Comments:** All Python files include inline documentation
+**Project Reports:**
+- `docs/URS_project_on_Kaggle_medical_insurance_dataset.docx` - Medical Insurance ANN analysis (Weeks 4-5)
+- `docs/URS Kaggle Tip dataset analysis and ANN model development.docx` - Tips dataset regression analysis (Week 6)
+- `docs/URS Kaggle Titanic dataset data and ANN model development.docx` - Titanic classification analysis (Week 6)
+
+**Progress Tracking:**
+- `progress.md` - Detailed weekly progress log with meeting notes and learning outcomes
+
+**Code Files:**
+- `src/visualize_co2.py` - JANAF CO₂ thermodynamic data visualization
+- `src/visualize_co_cp_vs_T.py` - CO heat capacity analysis
+- `src/complete_ann_model.py` - Medical insurance ANN implementation
+- `src/ANN_tip.py` - Tips dataset ANN regression
+- `src/tip_visualizations.py` - Comprehensive tips dataset EDA
+- `src/titanic_ann_classification.py` - Titanic survival classification with model comparison
+
+**All Python files include inline documentation and comments.**
+
+---
+
+## Next Steps
+
+**Immediate Goals (Week 7-8):**
+1. Find 3-5 new datasets for classification and regression practice
+2. Learn advanced classification methods (Decision Trees, Random Forest, XGBoost)
+3. Apply classification to Tips dataset (predict tip categories: Low/Medium/High)
+4. Begin work on virtual sensor datasets provided by Dr. Gupta
+5. Initialize WARS project: Extreme weather survival probability prediction
+
+**Learning Objectives:**
+- Master k-fold cross-validation implementation in Python
+- Understand ensemble methods (bagging, boosting)
+- Learn feature selection and dimensionality reduction techniques
+- Explore hyperparameter tuning with GridSearchCV
 
 ---
 
 ## 👤 Author
 
-**Daisiqi** | Machine Learning & Data Science Researcher
-
+**Daisiqi** | Machine Learning & Data Science Researcher  
 *University of Wisconsin–Madison*
 
 ---
@@ -223,7 +226,7 @@ This project is for educational and research purposes under the URS (Undergradua
 
 - **Mentor & Advisor:** Dr. Gupta for guidance on ML methodology and project direction
 - **NIST:** For providing comprehensive thermodynamic databases
-- **Kaggle:** For medical insurance dataset and community resources
+- **Kaggle:** For medical insurance, tips, and Titanic datasets and community resources
 - **UW–Madison:** For supporting undergraduate research initiatives
 
 ---
@@ -235,5 +238,4 @@ Feel free to open an issue or contact me directly. Contributions and suggestions
 ---
 
 **Last Updated:** November 6, 2025  
-**Project Status:** Active (Week 6 Complete: Comparative Analysis of 2 Kaggle Datasets)
-
+**Project Status:** Active (Week 6 Complete: Comparative Analysis of Tips & Titanic Datasets)
