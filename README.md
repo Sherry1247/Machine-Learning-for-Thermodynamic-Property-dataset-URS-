@@ -549,7 +549,7 @@ Machine-Learning-for-Thermodynamic-Property-dataset-URS-/
 If you use this work in your research, please cite:
 ```bibtex
 @misc{urs_virtual_sensor_2026,
-  author = {[Your Name]},
+  author = {[Siqi Dai]},
   title = {Multi-Architecture Neural Network Virtual Sensor for Diesel Engine Combustion Prediction},
   year = {2026},
   institution = {University of Wisconsin–Madison},
